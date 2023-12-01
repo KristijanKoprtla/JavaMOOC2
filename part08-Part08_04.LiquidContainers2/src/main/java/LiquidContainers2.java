@@ -8,6 +8,7 @@ public class LiquidContainers2 {
         Container first = new Container();
         Container second = new Container();
 
+
         while (true) {
             System.out.print("First: " + first.contains() + "/100\n");
             System.out.println("Second: " + second.contains() + "/100");
@@ -16,22 +17,21 @@ public class LiquidContainers2 {
             if (input.equals("quit")) {
                 break;
             }
-
+            
             String[] parts = input.split(" ");
             String command = parts[0];
             int amount = Integer.valueOf(parts[1]);
-
-            if (command.equals("add")) {
+            
+            if(command.equals("add")) {
                 first.add(amount);
-            }
-            if (input.equals("move")) {
-                if (amount > first.contains()) {
+            }else if(command.equals("move")) {
+                if(amount > first.contains()) {
                     amount = first.contains();
-                }
-
+                } 
                 first.remove(amount);
                 second.add(amount);
-            } else if (command.equals("remove")) {
+                 
+            } else if(command.equals("remove")) {
                 second.remove(amount);
             }
 

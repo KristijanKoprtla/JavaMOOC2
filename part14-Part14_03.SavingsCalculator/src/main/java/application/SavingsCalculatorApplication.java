@@ -24,10 +24,8 @@ public class SavingsCalculatorApplication extends Application {
         savingsSlider.setMin(25);
         savingsSlider.setMax(250);
         savingsSlider.setMajorTickUnit(25);
-        savingsSlider.setBlockIncrement(500);
         savingsSlider.setShowTickLabels(true);
         savingsSlider.setShowTickMarks(true);
-
         savingsUI.setLeft(savingsLabel);
         savingsUI.setCenter(savingsSlider);
         savingsUI.setRight(monthlyAmount);
